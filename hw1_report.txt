@@ -1,0 +1,55 @@
+Michael Harris
+Dr. Feng
+Deep Learning
+Hw1
+
+HW1_1:
+-train two different models with the same number of parameters: this was easier said than done as the only method I found to do this was by trial and error.
+I eventually got both models to within 200 parameters of each other and deemed it a success.
+-compare training process: the details of this will be found in "hw_1" file, they lay out 3 different models (2 with similar parameters and 1 different).
+- visualize predictions: I test the accuracy of my model in comparison to the validation set for all 3 models.
+
+Report questions:
+SIMULATE A FUNCTION:
+- Describe the models you use: I use three different models in the CIFAR-10 task. All of which use SGD optimizer with a learning rate of 0.001. The first model is shallow in it's build and is relatively simple with a 5x5 kernel and a fully connected layer on the backend. The second model is a deeper version of the first with smaller parameters for each node as to accomodate to meet the requirement that both model one and model two be equal in their number of parameters. The third model is a full blown experiment in seeing how much a similar architecture could benefit from larger parameters.
+-- training loss and accuracy are plotted in the file. Comments are under the results in the file.
+-- I use more than two models.
+
+TRAIN ON ACTUAL TASKS:
+- I tackle the CIFAR-10 dataset with a CNN model, these are the same models as above (as it never indicated that I couldn't create a model that was all of the above), the accuracy and loss is displayed in file. Comments about the results are in the file.
+-- Used more than two models.
+
+
+HW1_2:
+-I had an extremely difficult time understanding what this section was asking of me, and the parts I thought I did understand were almost conceptually impossible for me to implement so I figured I was doing it wrong and that I should move on. If the TA is reading this, I'll most likely be sending you an email on Sunday to see when I can come into talk to you about this section of the assignment as I was very confused.
+
+-I did create a way to collect the weights, but didn't understand how to put them into matplotlib as a scatterplot in the same way that you displayed it with 1 layer vs the whole model on page 16. 
+- This being said, I do believe that I collected the gradient and displayed it in a way similar to what you are asking. The only difference is that it uses far less epochs.
+
+HW1_3:
+Can network fit random labels?:
+- Network will be trained on CIFAR-10
+- The network is shuffled and inserted into the train_dl dataloader.
+- The network is fitted to these random labels.
+
+Report Questions:
+- I used CIFAR10, a learning rate of 0.001, and a SGD optimizer.
+- This can be seen for every single one of the models in file "hw_1_3" they are all running off of the shuffled set,
+thus every plot on that file is also demonstrating the difference in loss and accuracy between training and testing
+over a period of n-many epochs, but more explicitly over the size of the val_dl dataloader. Thus the plot's are aptly labeled
+as images rather than epochs as it felt more true to the data I was presenting, even though the performance is taken over all of the epochs.
+
+Number of parameters vs generalization:
+- Trained on CIFAR-10
+- created 10 similar structured models
+- compare training loss and accuracy to testing loss and accuracy
+
+Report Questions:
+- My task is CIFAR-10, the optimizer is SGD, with a learning rate of 0.001. The architectures of the models are all explained in the file and are
+all designed as slight variations of the other. I thought this approach would allow for me to see the relationship between their differences in a 
+more meaningful way.
+- All metrics are plotted accordingly in-file.
+- The result is mixed and 
+
+Flatness vs Generalization:
+Unattempted.
